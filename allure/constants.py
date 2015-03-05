@@ -7,6 +7,8 @@ Created on Oct 15, 2013
 '''
 from enum import Enum
 
+from allure.utils import AttachTuple
+
 
 class Status(object):
     FAILED = 'failed'
@@ -32,19 +34,14 @@ class Severity(object):
     TRIVIAL = 'trivial'
 
 
-class AttachmentType(Enum):
-
-    def __init__(self, mime_type, extension):
-        self.mime_type = mime_type
-        self.extension = extension
-
-    TEXT = ("text/plain", "txt")
-    HTML = ("application/html", "html")
-    XML = ("application/xml", "xml")
-    PNG = ("image/png", "png")
-    JPG = ("image/jpg", "jpg")
-    JSON = ("application/json", "json")
-    OTHER = ("other", "other")
+class AttachmentType(object):
+    TEXT = AttachTuple("text/plain", "txt")
+    HTML = AttachTuple("application/html", "html")
+    XML = AttachTuple("application/xml", "xml")
+    PNG = AttachTuple("image/png", "png")
+    JPG = AttachTuple("image/jpg", "jpg")
+    JSON = AttachTuple("application/json", "json")
+    OTHER = AttachTuple("other", "other")
 
 
 ALLURE_NAMESPACE = "urn:model.allure.qatools.yandex.ru"
