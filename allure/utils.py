@@ -12,7 +12,6 @@ import time
 import hashlib
 import inspect
 
-from collections import namedtuple
 from six import text_type, binary_type, python_2_unicode_compatible, u
 from six.moves import filter
 from traceback import format_exception_only
@@ -21,8 +20,6 @@ from _pytest.python import Module
 
 from allure.constants import Label
 
-
-AttachTuple = namedtuple('AttachTuple', ['mime_type', 'extension'])
 
 def parents_of(item):
     """

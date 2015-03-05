@@ -5,9 +5,8 @@ Created on Oct 15, 2013
 
 @author: pupssman
 '''
+from collections import namedtuple
 from enum import Enum
-
-from allure.utils import AttachTuple
 
 
 class Status(object):
@@ -32,6 +31,9 @@ class Severity(object):
     NORMAL = 'normal'
     MINOR = 'minor'
     TRIVIAL = 'trivial'
+
+
+AttachTuple = namedtuple('AttachTuple', ['mime_type', 'extension'])
 
 
 class AttachmentType(object):
