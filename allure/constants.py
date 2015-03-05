@@ -6,7 +6,6 @@ Created on Oct 15, 2013
 @author: pupssman
 '''
 from collections import namedtuple
-from enum import Enum
 
 
 class Status(object):
