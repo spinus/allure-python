@@ -25,8 +25,8 @@ def main():
             "lxml>=3.2.0",
             "pytest>=2.7.0",
             "namedlist",
-            "six>=1.9.0",
-            "enum34"]
+            "six>=1.9.0"] +
+            ["enum34"] if sys.version < "3.4" else []
     )
 
 if __name__ == '__main__':
